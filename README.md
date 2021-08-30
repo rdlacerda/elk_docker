@@ -22,5 +22,7 @@ http://kibana:5601</br>
 Buscar docker nos dashboards</br>
 Verificar arquivo infra.png</br> 
 
+# Observacao
+O metricbeat exporta para o container varios diretorios sensiveis<br>
 
 
