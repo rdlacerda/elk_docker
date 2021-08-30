@@ -1,2 +1,26 @@
 # elk_docker
 Docker-compose Metricbeat coletando informações DockerHost e enviando para Elasticsearch com dashboards no Kibana.
+
+# Funcionamento
+O agente do metricbeat coleta informacoes do dockerhost via agente docker</br>
+Essas informacoes sao armazenadas no Elasticsearch via um indice especifico</br>
+Kibana permite visualizar as informacoess do Dockerhost via Dashboard carregado pelo Metricbeat</br>
+
+#Realizar download das imagens
+docker pull elasticsearch:7.14.0</br>
+docker pull kibana:7.14.0</br>
+docker pull elastic/metricbeat:7.14.0</br>
+
+#Subir ambiente via compose
+docker-compose up</br>
+
+#Apos inicializacao do Kibana, carregar os dashboards do Metricbeat
+docker exec metricbeat /usr/share/metricbeat/metricbeat setup --dashboard</br>
+
+#Para visualizar o dashboard
+http://kibana:5601</br>
+Buscar docker nos dashboards</br>
+Verificar arquivo infra.png</br> 
+
+
+
