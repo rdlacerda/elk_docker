@@ -17,7 +17,7 @@ docker-compose up</br>
 # Apos inicializacao do Kibana, carregar os dashboards do Metricbeat
 chmod 640 metricbeat.docker.yml</br>
 chown root metricbeat.docker.yml</br>
-docker exec metricbeat /usr/share/metricbeat/metricbeat setup --dashboard</br>
+docker exec metricbeat /usr/share/metricbeat/metricbeat setup --dashboards</br>
 
 # Para visualizar o dashboard
 http://kibana:5601</br>
