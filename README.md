@@ -15,6 +15,8 @@ docker pull elastic/metricbeat:7.14.0</br>
 docker-compose up</br>
 
 # Apos inicializacao do Kibana, carregar os dashboards do Metricbeat
+chmod 640 metricbeat.docker.yml</br>
+chown root metricbeat.docker.yml</br>
 docker exec metricbeat /usr/share/metricbeat/metricbeat setup --dashboard</br>
 
 # Para visualizar o dashboard
